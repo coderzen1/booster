@@ -1,0 +1,43 @@
+.footer {
+  height: $primary-nav-header-height;
+  background-color: $primary-color;
+  color: $base-white-color;
+  font-size: $regular-font-size;
+  padding: 0 $secondary-nav-header-padding;
+
+  @include mobile {
+    padding: 0 $primary-nav-header-padding;
+  }
+
+  @include large {
+    padding: 0 $ternary-nav-header-padding;
+  }
+
+  .footer__menu-item {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: $primary-nav-header-height;
+    margin-right: $primary-link-padding;
+    cursor: pointer;
+  }
+
+  .footer__social-links {
+    text-align: right;
+  }
+
+  .footer__social-link {
+    width: 40px;
+    height: $primary-nav-header-height;
+    display: inline-block;
+    cursor: pointer;
+    background: {
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+    }
+  }
+
+  .footer__social-link--facebook {
+    background-image: url('../images/icons/facebook-icon.png');
+  }
+}

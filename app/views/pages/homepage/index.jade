@@ -1,0 +1,19 @@
+extends ../../layout.jade
+
+block content
+  .homepage.js-page(data-page-name="index")
+    header.homepage__main-header
+      include ../../navigation/nav-header.jade
+      .homepage__main-header-image
+        .homepage__main-header-info
+          .homepage__main-header-title GET A BOOST
+          .homepage__main-header-title A full tank of gas delivered
+          .homepage__main-header-button GET STARTED
+    
+    include ./references.jade
+    include ./comparisons.jade
+    
+    include ../../shared/footer.jade
+
+block append scripts
+  script(type="text/javascript", src='./assets/javascripts/browserify/app.nav.js')

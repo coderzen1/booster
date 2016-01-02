@@ -1,0 +1,200 @@
+$primary-nav-link-hover-darken: 30%;
+
+.nav-header {
+  position: fixed;
+  width: 100%;
+  font-size: $regular-font-size;
+  z-index: 200;
+
+  .nav-header__container {
+    position: relative;
+    width: 100%;
+    height: $primary-nav-header-height;
+    background-color: $primary-color;
+    color: $base-white-color;
+    padding: 0 $secondary-nav-header-padding;
+    transition: $primary-transition;
+
+    @include mobile {
+      padding: 0 $primary-nav-header-padding;
+    }
+
+    @include large {
+      padding: 0 $ternary-nav-header-padding;
+    }
+
+    &.nav-header__container--subheader {
+      background-color: $secondary-background-color;
+      color: $primary-light-font-color;
+
+      @include mobile {
+        display: none;
+      }
+
+      .nav-header__spacer {
+        line-height: 65px;
+      }
+    }
+  }
+
+  .nav-header__mobile {
+    display: none;
+    height: $primary-nav-header-height;
+    vertical-align: middle;
+
+    @include mobile {
+      display: inline-block;
+    }
+  }
+
+  .nav-header__desktops {
+    display: inline-block;
+    vertical-align: middle;
+    height: $primary-nav-header-height;
+    line-height: $primary-nav-header-height;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .nav-header__column {
+    display: inline-block;
+    vertical-align: middle;
+    height: $primary-nav-header-height;
+
+    &.nav-header__column--right {
+      text-align: right;
+    }
+  }
+
+  .nav-header__spacer {
+    display: inline-block;
+    margin-right: $primary-link-padding;
+    line-height: $primary-nav-header-height;
+    color: inherit;
+  }
+
+  .nav-header__logo {
+    height: $primary-nav-header-height;
+    width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $primary-link-padding;
+    cursor: pointer;
+    background: {
+      image: url('../images/boosterfuels-logo.png');
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+    }
+
+    @media (max-width: 400px) {
+      width: 110px;
+      margin-right: 0;
+    }
+  }
+
+  .nav-header__mobile-menu-button {
+    float: left;
+    height: 28px;
+    width: 28px;
+    margin-right: $primary-link-padding;
+    margin-top: 20px;
+    cursor: pointer;
+    background: {
+      image: url('../images/icons/menu-icon.png');
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+    }
+  }
+
+  .nav-header__link {
+    display: inline-block;
+    margin-right: $primary-link-padding;
+    cursor: pointer;
+    height: 100%;
+
+    &:hover {
+      color: darken($base-white-color, $primary-nav-link-hover-darken)
+    }
+
+    &.nav-header__link--last {
+      margin-right: 0;
+    }
+  }
+
+  .nav-header__dropdown-menu {
+
+    .nav-header__text {
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .nav-header__icon {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: {
+        image: url('../images/icons/arrow-down.png');
+        repeat: no-repeat;
+        size: contain;
+        position: right;
+      }
+    }
+  }
+
+  .nav-header__button-container {
+    height: $primary-nav-header-height;
+    line-height: 40px;
+  }
+
+  .nav-header__button {
+    float: right;
+    height: 42px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 13px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($primary-color, 40%);
+      color: $base-white-color;
+    }
+  }
+
+  .nav-header__container--subheader {
+    height: 0;
+    opacity: 0;
+    z-index: 50;
+    margin-top: -2px;
+    -webkit-transition-property: height opacity;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    transition-property: height opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+    &.showing {
+      height: $primary-nav-header-height;
+      opacity: 1;
+    }
+  }
+
+  .nav-header__dropdown-list-item {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 65px;
+
+    margin-right: $primary-nav-header-padding;
+    cursor: pointer;
+
+    &:hover {
+      color: $base-black-color;
+    }
+  }
+
+}

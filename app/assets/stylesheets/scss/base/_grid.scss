@@ -1,0 +1,14 @@
+.grid {
+
+  .grid__column {
+    float: left;
+  }
+
+  .grid__column--two-fifths {
+    width: 40%;
+  }
+
+  .grid__column--three-fifths {
+    width: 60%;
+  }
+}

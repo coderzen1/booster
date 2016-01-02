@@ -1,0 +1,27 @@
+@mixin mobile {
+  @media #{$mobile} { @content; }
+}
+
+@mixin mobile-big {
+  @media #{$mobile-big} { @content; }
+}
+
+@mixin tablet {
+  @media #{$tablet} { @content; }
+}
+
+@mixin tablet-only {
+  @media #{$tablet-only} { @content; }
+}
+
+@mixin desktop {
+  @media #{$desktop} { @content; }
+}
+
+@mixin desktop-only {
+  @media #{$desktop-only} { @content; }
+}
+
+@mixin large {
+  @media #{$large} { @content; }
+}

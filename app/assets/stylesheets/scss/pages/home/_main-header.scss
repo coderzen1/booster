@@ -1,0 +1,56 @@
+.homepage__main-header {
+  position: relative;
+  height: 460px;
+
+  .homepage__main-header-image {
+    position: absolute;
+    top: 0;
+    margin-top: 66px;
+    height: 394px;
+    width: 100%;
+    transition: $primary-transition;
+    background: {
+      image: url('../images/header-image.jpg');
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+
+    @include mobile {
+      background-image: url('../images/mobile-header-image.jpg');
+    }
+  }
+
+  .homepage__main-header-info {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: 25%;
+    bottom: auto;
+  }
+
+  .homepage__main-header-title {
+    font-size: $large-font-size;
+    color: $base-white-color;
+    text-align: center;
+  }
+
+  .homepage__main-header-button {
+    width: 170px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 49px;
+    margin: 0 auto;
+    padding: 0 $primary-link-padding;
+    border: 2px solid lighten($primary-color, 40%);
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $base-white-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($primary-color, 40%);
+    }
+  }
+}

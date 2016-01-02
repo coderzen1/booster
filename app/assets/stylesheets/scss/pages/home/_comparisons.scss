@@ -1,0 +1,15 @@
+.homepage__comparisons {
+  position: relative;
+  height: 200px;
+  background-color: $secondary-color;
+  color: $base-white-color;
+
+  .homepage__comparisons-title {
+    position: relative;
+    top: 50%;
+    bottom: auto;
+    text-align: center;
+    font-size: $medium-font-size;
+    font-family: 'robotothin';
+  }
+}

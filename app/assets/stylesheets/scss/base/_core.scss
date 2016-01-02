@@ -1,0 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'robotoregular', Helvetica, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $primary-background-color;
+}
